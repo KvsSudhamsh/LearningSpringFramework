@@ -10,10 +10,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class EmailApplication {
     public static void main(String[] args) {
-        ApplicationContext applicationContext=
-                new ClassPathXmlApplicationContext("beans.xml");
-        /*ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(AppConfig.class);*/
+        /*ApplicationContext applicationContext=
+                new ClassPathXmlApplicationContext("beans.xml");*/
+        ApplicationContext applicationContext =
+                new AnnotationConfigApplicationContext(AppConfig.class);
 
         EmailClient emailClient=applicationContext.getBean("emailClient", EmailClient.class);
        emailClient.sendEmail("Hey "+ "This is my first email message.");

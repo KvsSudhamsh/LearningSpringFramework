@@ -1,10 +1,12 @@
 package com.programming.techie;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan(basePackages = "com.programming.techie")
 public class AppConfig {
 
-    @Bean(name = "basicSpellChecker")
+ /*   @Bean(name = "basicSpellChecker")
     public BasicSpellChecker createBasicSpellChecker(){
         return new BasicSpellChecker();
     }
@@ -17,5 +19,5 @@ public class AppConfig {
     @Bean(name = "emailClient")
     public EmailClient createEmailClient(){
         return new EmailClient(createAdvancedSpellChecker());
-    }
+    }*/
 }

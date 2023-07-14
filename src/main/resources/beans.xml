@@ -5,10 +5,11 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="emailClient" class="com.programming.techie.EmailClient">
-        <constructor-arg ref="AdvancedSpellChecker"/>
+     <!--<constructor-arg ref="AdvancedSpellChecker"/>-->
+        <property name="spellChecker" ref="BasicSpellChecker"/>
     </bean>
 
-    <bean id="basicSpellChecker" class="com.programming.techie.BasicSpellChecker">
+    <bean id="BasicSpellChecker" class="com.programming.techie.BasicSpellChecker">
     </bean>
 
     <bean id="AdvancedSpellChecker" class="com.programming.techie.AdvancedSpellChecker">

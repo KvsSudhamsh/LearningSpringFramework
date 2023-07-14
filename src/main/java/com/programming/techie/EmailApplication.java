@@ -16,7 +16,7 @@ public class EmailApplication {
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
         EmailClient emailClient=applicationContext.getBean("emailClient", EmailClient.class);
-       emailClient.sendEmail("Hey "+ "This is my first email message.");
-       emailClient.sendEmail("Hey, " + "This is my second email message.");
+       emailClient.sendEmail("Hey, " + "This is my First email message.");
+       emailClient.sendEmail("Hey, " + "This is my Second email message.");
     }
 }

@@ -18,7 +18,7 @@ class EmailClient {
     }
 
     @Autowired
-    public void setSpellChecker(@Qualifier("basicSpellChecker") SpellChecker spellChecker) {
+    public void setSpellChecker( SpellChecker spellChecker) {
         this.spellChecker = spellChecker;
     }
 
